@@ -16,8 +16,8 @@
 
     <section class="form-section">
       <h2>Registration Form</h2>
-      <!-- FormSubmit form -->
-      <form action="https://formsubmit.co/heyderadem25@gmail.com" method="POST">
+      <!-- Updated FormSubmit form with file upload -->
+      <form action="https://formsubmit.co/heyderadem25@gmail.com" method="POST" enctype="multipart/form-data">
         <label>Full Name:</label>
         <input type="text" name="name" placeholder="Enter full name" required />
 
@@ -33,7 +33,7 @@
           <option value="Grade 12">Grade 12</option>
         </select>
 
-        <!-- Stream selection for Grade 11 & 12 -->
+        <!-- Stream selection -->
         <div id="streamContainer" style="display: none;">
           <label>Stream:</label>
           <select name="stream" id="streamSelect">
@@ -48,6 +48,10 @@
 
         <label>Phone Number:</label>
         <input type="tel" name="phone" placeholder="Enter phone number" required />
+
+        <!-- File upload -->
+        <label>Upload Payment Proof:</label>
+        <input type="file" name="payment" accept="image/*" required />
 
         <button type="submit">Register</button>
       </form>
@@ -68,5 +72,4 @@
     });
   </script>
 </body>
-          </html>
-
+  </html>
