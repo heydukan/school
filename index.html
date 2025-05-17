@@ -7,8 +7,6 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  https://formsubmit.co/heyderadem25@gmail.com
-  
   <div class="container">
     <header>
       <img src="mylogo.png" alt="School Logo" class="logo" />
@@ -18,43 +16,32 @@
 
     <section class="form-section">
       <h2>Registration Form</h2>
-      <form id="registrationForm">
+      <!-- FormSubmit form -->
+      <form action="https://formsubmit.co/heyderadem25@gmail.com" method="POST">
         <label>Full Name:</label>
-        <input type="text" placeholder="Enter full name" required />
+        <input type="text" name="name" placeholder="Enter full name" required />
 
         <label>Age:</label>
-        <input type="number" placeholder="Enter age" required />
+        <input type="number" name="age" placeholder="Enter age" required />
 
         <label>Class:</label>
-        <select required>
+        <select name="class" required>
           <option value="">Choose Class</option>
-          <option>Grade 1</option>
-          <option>Grade 2</option>
-          <option>Grade 3</option>
-          <option>Grade 4</option>
+          <option>Grade 9</option>
+          <option>Grade 10</option>
+          <option>Grade 11</option>
+          <option>Grade 12</option>
         </select>
 
         <label>Email:</label>
-        <input type="email" placeholder="Enter email" required />
+        <input type="email" name="email" placeholder="Enter email" required />
 
         <label>Phone Number:</label>
-        <input type="tel" placeholder="Enter phone number" required />
+        <input type="tel" name="phone" placeholder="Enter phone number" required />
 
         <button type="submit">Register</button>
       </form>
-      <p id="successMessage" class="hidden">Registration Successful! Thank you.</p>
     </section>
   </div>
-
-  <script>
-    const form = document.getElementById('registrationForm');
-    const successMessage = document.getElementById('successMessage');
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      successMessage.classList.remove('hidden');
-      form.reset();
-    });
-  </script>
 </body>
 </html>
